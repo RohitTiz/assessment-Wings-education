@@ -21,5 +21,5 @@ This is a frontend assessment project built for **Wings Education** as part of t
 
 ---
 
-## 📁 Folder Structure
+
 
