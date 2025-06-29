@@ -14,7 +14,7 @@ const HeroSection = () => {
           Welcome to EduAll, where learning begins for every professional and
           lifelong learner.
         </p>
-
+{/* //code for button */}
         <div style={styles.buttonGroup}>
           <button style={styles.primary}>Browse Courses ↗</button>
           <button style={styles.secondary}>About Us ↗</button>
@@ -35,7 +35,7 @@ const HeroSection = () => {
 
       {/* Decorative Button Image */}
       <img
-        src="public/heroimage/button.png"
+        src="/heroimage/Button.png"
         alt="Decorative Button"
         style={styles.decorativeButton}
       />
@@ -80,7 +80,7 @@ const styles = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'flex-start',
-  padding: '10px 80px 80px 80px', // ← Updated padding here
+  padding: '10px 80px 80px 80px', 
   boxSizing: 'border-box',
   overflow: 'visible',
 },
@@ -160,7 +160,7 @@ const styles = {
   imageWrapper: {
     position: 'absolute',
     right: '257.38px',
-    top: '-15px', // Image touches the top of the hero section
+    top: '-15px', 
     zIndex:'-30px' ,
   },
 
