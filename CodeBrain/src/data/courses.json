@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "The Complete Digital Marketing Course - 12 Courses in 1",
+    "instructors": "Rob Percival, Daragh Walsh, Codestars",
+    "rating": "4.4",
+    "totalRatings": "178,286",
+    "price": "4499",
+    "image": "https://img-c.udemycdn.com/course/240x135/914296_3670_8.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Digital Marketing Masterclass: AI & Social Media Marketing",
+    "instructors": "Phil Ebiner, Diego Davila",
+    "rating": "4.5",
+    "totalRatings": "25,286",
+    "price": "4499",
+    "image": "public/image/courcetwo.png"
+  },
+  {
+    "id": 3,
+    "title": "The Complete Digital Marketing Guide - 27 Courses in 1",
+    "instructors": "Robin & Jesper",
+    "rating": "4.6",
+    "totalRatings": "44,908",
+    "price": "3299",
+    "image": "https://img-c.udemycdn.com/course/240x135/1362070_b9a1_2.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing Strategist. Unlock your career growth",
+    "instructors": "Anton Voroniuk, Anton Voroniuk Support, Vlad",
+    "rating": "4.4",
+    "totalRatings": "3,749",
+    "price": "3999",
+    "image": "public/image/courcethree.png"
+  },
+   {
+    "id": 1,
+    "title": "The Complete Digital Marketing Course - 12 Courses in 1",
+    "instructors": "Rob Percival, Daragh Walsh, Codestars",
+    "rating": "4.4",
+    "totalRatings": "178,286",
+    "price": "4499",
+    "image": "https://img-c.udemycdn.com/course/240x135/914296_3670_8.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Digital Marketing Masterclass: AI & Social Media Marketing",
+    "instructors": "Phil Ebiner, Diego Davila",
+    "rating": "4.5",
+    "totalRatings": "25,286",
+    "price": "4499",
+    "image": "public/image/courcetwo.png"
+  },
+  {
+    "id": 3,
+    "title": "The Complete Digital Marketing Guide - 27 Courses in 1",
+    "instructors": "Robin & Jesper",
+    "rating": "4.6",
+    "totalRatings": "44,908",
+    "price": "3299",
+    "image": "https://img-c.udemycdn.com/course/240x135/1362070_b9a1_2.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing Strategist. Unlock your career growth",
+    "instructors": "Anton Voroniuk, Anton Voroniuk Support, Vlad",
+    "rating": "4.4",
+    "totalRatings": "3,749",
+    "price": "3999",
+    "image": "public/image/courcethree.png"
+  }
+]
