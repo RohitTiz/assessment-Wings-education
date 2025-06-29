@@ -22,4 +22,5 @@ This is a frontend assessment project built for **Wings Education** as part of t
 ---
 
 
+![Screenshot 2025-06-29 203122](https://github.com/user-attachments/assets/fb373333-b940-4187-95c4-5fdce38fd77c)
 
