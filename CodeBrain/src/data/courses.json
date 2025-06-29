@@ -15,7 +15,7 @@
     "rating": "4.5",
     "totalRatings": "25,286",
     "price": "4499",
-    "image": "public/image/courcetwo.png"
+    "image": "/image/courcetwo.png"
   },
   {
     "id": 3,
@@ -51,7 +51,7 @@
     "rating": "4.5",
     "totalRatings": "25,286",
     "price": "4499",
-    "image": "/image/courcetwo.png"
+    "image": "/public/image/courcetwo.png"
   },
   {
     "id": 3,
