@@ -3,6 +3,7 @@ import React from 'react';
 const HeroSection = () => {
   return (
     <section style={styles.container}>
+      {/* Left Content */}
       <div style={styles.leftContent}>
         <h1 style={styles.line}>
           Find Your <span style={styles.ideal}>Ideal</span>
@@ -11,110 +12,72 @@ const HeroSection = () => {
         <h1 style={styles.skillsLine}>Skills</h1>
 
         <p style={styles.description}>
-          Welcome to EduAll, where learning begins for every professional and
-          lifelong learner.
+          Welcome to EduAll, where learning begins for every professional and lifelong learner.
         </p>
-{/* //code for button */}
+
         <div style={styles.buttonGroup}>
           <button style={styles.primary}>Browse Courses ↗</button>
           <button style={styles.secondary}>About Us ↗</button>
         </div>
       </div>
 
-      {/* Main Hero Image */}
+      {/* Image + Decorative Elements */}
       <div style={styles.imageWrapper}>
         <img src="/image/main.png" alt="Hero" style={styles.heroImage} />
+
+        {/* Now nested under imageWrapper */}
+        <img src="/heroimage/triangle.png" alt="Triangle" style={styles.triangleImage} />
+        <img src="/heroimage/Button.png" alt="Decorative Button" style={styles.decorativeButton} />
+        <img src="/heroimage/enrolledstudents.png" alt="Enrolled Students" style={styles.enrolledStudents} />
+        <img src="/heroimage/curlyarrow.png" alt="Curly Arrow" style={styles.curlyArrow} />
+        <img src="/heroimage/off.png" alt="20% Off" style={styles.discountBadge} />
+        <img src="/heroimage/books.png" alt="Books" style={styles.booksIcon} />
+        <img src="/heroimage/gird.png" alt="Grid" style={styles.gridIcon} />
       </div>
-
-      {/* Triangle Icon */}
-      <img
-        src="/heroimage/triangle.png"
-        alt="Triangle"
-        style={styles.triangleImage}
-      />
-
-      {/* Decorative Button Image */}
-      <img
-        src="/heroimage/Button.png"
-        alt="Decorative Button"
-        style={styles.decorativeButton}
-      />
-
-      {/* Enrolled Students Image */}
-      <img
-        src="/heroimage/enrolledstudents.png"
-        alt="Enrolled Students"
-        style={styles.enrolledStudents}
-      />
-
-      {/* Curly Arrow Image */}
-      <img
-        src="/heroimage/curlyarrow.png"
-        alt="Curly Arrow"
-        style={styles.curlyArrow}
-      />
-
-      {/* 20% Off Badge */}
-      <img
-        src="/heroimage/off.png"
-        alt="20% Off"
-        style={styles.discountBadge}
-      />
-
-      {/* Decorative Books Icon */}
-      <img src="/heroimage/books.png" alt="Books" style={styles.booksIcon} />
-
-      {/* Decorative Grid Icon */}
-      <img src="/heroimage/gird.png" alt="Grid" style={styles.gridIcon} />
     </section>
   );
 };
 
 const styles = {
   container: {
-  position: 'relative',
-  width: '100%',
-  minHeight: '700px',
-  backgroundColor: '#FFFFFF',
-  borderBottom: '1.5px solid #EEF0F3',
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'flex-start',
-  padding: '10px 80px 80px 80px', 
-  boxSizing: 'border-box',
-  overflow: 'visible',
-},
-
+    position: 'relative',
+    width: '100%',
+    minHeight: '700px',
+    backgroundColor: '#FFFFFF',
+    borderBottom: '1.5px solid #EEF0F3',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    padding: '10px 40px 80px 40px',
+    boxSizing: 'border-box',
+    overflow: 'hidden',
+  },
 
   leftContent: {
-    maxWidth: '600px',
+    flex: '1 1 500px',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
     zIndex: 2,
-    marginTop: '0',
-    padding : '40px 0px 0px 0px '
+    padding: '40px 0',
   },
 
   line: {
     fontFamily: 'Inter, sans-serif',
-    fontStyle: 'normal',
     fontWeight: 600,
-    fontSize: '64px',
-    lineHeight: '77px',
+    fontSize: '48px',
+    lineHeight: '1.2',
     color: '#3C475E',
     margin: 0,
   },
 
   skillsLine: {
     fontFamily: 'Inter, sans-serif',
-    fontStyle: 'normal',
     fontWeight: 600,
-    fontSize: '64px',
-    lineHeight: '77px',
+    fontSize: '48px',
+    lineHeight: '1.2',
     color: '#2D82D2',
-    margin: '0 0 24px 0',
+    marginBottom: '24px',
   },
 
   ideal: {
@@ -133,6 +96,7 @@ const styles = {
   buttonGroup: {
     display: 'flex',
     gap: '15px',
+    flexWrap: 'wrap',
   },
 
   primary: {
@@ -158,24 +122,26 @@ const styles = {
   },
 
   imageWrapper: {
-    position: 'absolute',
-    right: '257.38px',
-    top: '-15px', 
-    zIndex:'-30px' ,
+    flex: '1 1 400px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '40px',
+    position: 'relative', // crucial for absolute children to follow this
   },
 
   heroImage: {
-    width: '484.11px',
-    height: '526.41px',
-    objectFit: 'contain',
+    maxWidth: '100%',
+    height: 'auto',
+    zIndex: 1,
   },
 
   triangleImage: {
     position: 'absolute',
     width: '64.1px',
     height: '46.6px',
-    right: '146.05px',
-    bottom: '450px',
+    right: '10%',
+    top: '10%',
     zIndex: 3,
   },
 
@@ -183,64 +149,55 @@ const styles = {
     position: 'absolute',
     width: '127px',
     height: '47px',
-    left: '1190px',
-    top: '250px',
+    right: '3%',
+    top: '40%',
     zIndex: 5,
-    },
-    
+  },
 
   enrolledStudents: {
-  position: 'absolute',
-  width: '182.17px',
-  height: '91.48px',
-  right: '660.52px',
-  bottom: ' 600.92px',
-  zIndex: 4,
+    position: 'absolute',
+    width: '182.17px',
+    height: '91.48px',
+    left: '40%',
+    top: '-10%',
+    zIndex: 4,
   },
 
   curlyArrow: {
-  position: 'absolute',
-  width: '106.27px',
-  height: '93.2px',
-  right: '761.73px',
-  bottom: '450.78px',
-  zIndex: 4,
+    position: 'absolute',
+    width: '106.27px',
+    height: '93.2px',
+    left: '5%',
+    top: '15%',
+    zIndex: 4,
   },
 
   discountBadge: {
-  position: 'absolute',
-  width: '200px',
-  height: '100px',
-  left: '642px',
-  bottom: '295px',
-  zIndex: 6,
-},
+    position: 'absolute',
+    width: '200px',
+    height: '100px',
+    left: '50%',
+    top: '50%',
+    zIndex: 6,
+  },
 
-booksIcon: {
-  position: 'absolute',
-  width: '57.35px',
-  height: '53.5px',
-  right: '775.23px',
-  bottom: '90.53px',
-  zIndex: 4,
-},
+  booksIcon: {
+    position: 'absolute',
+    width: '57.35px',
+    height: '53.5px',
+    left: '80%',
+    bottom: '5%',
+    zIndex: 4,
+  },
 
-gridIcon: {
-  position: 'absolute',
-  width: '68px',
-  height: '67px',
-  left: '42px',
-  top: '540px',
-  zIndex: 8,
-},
-
-
-
-
-
-
-
-  
+  gridIcon: {
+    position: 'absolute',
+    width: '68px',
+    height: '67px',
+    left: '0%',
+    bottom: '0%',
+    zIndex: 8,
+  },
 };
 
 export default HeroSection;

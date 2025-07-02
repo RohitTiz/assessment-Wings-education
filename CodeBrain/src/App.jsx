@@ -16,21 +16,14 @@ import Footer from './components/Footer.jsx';
 // Data
 import courses from './data/courses.json';
 
+// CSS import for responsiveness
+import './App.css';
+
 const App = () => {
   const sectionStyle = {
     padding: '40px 20px',
     backgroundColor: '#fff',
     textAlign: 'center',
-  };
-
-  const containerStyle = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'flex-start',
-    gap: '24px',
-    width: '1292px',
-    margin: '0 auto',
-    boxSizing: 'border-box',
   };
 
   const buttonWrapperStyle = {
@@ -57,16 +50,24 @@ const App = () => {
       <FeatureSection />
 
       <section style={sectionStyle}>
-        <h2 style={{ fontSize: '2.3rem', fontWeight: 'bold', marginBottom: '30px', fontFamily: 'Tahoma' }}>
+        <h2
+          style={{
+            fontSize: '2.3rem',
+            fontWeight: 'bold',
+            marginBottom: '30px',
+            fontFamily: 'Tahoma',
+          }}
+        >
           Explore Course Categories
         </h2>
-        <div style={containerStyle}>
+
+        {/* Responsive Course Card Grid */}
+        <div className="course-grid">
           {courses.map((course) => (
             <CourseCard key={course.id} course={course} />
           ))}
         </div>
 
-        {/* Explore Free Courses Button */}
         <div style={buttonWrapperStyle}>
           <button style={buttonStyle}>Explore Free Courses</button>
         </div>

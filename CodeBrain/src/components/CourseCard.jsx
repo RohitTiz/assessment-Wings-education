@@ -1,4 +1,5 @@
 import React from 'react';
+import './CourseCard.css'; // Import optional if CSS moved out
 
 const CourseCard = ({ course }) => {
   const styles = {
@@ -12,8 +13,8 @@ const CourseCard = ({ course }) => {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'flex-start',
-      width: '300px',
-      height: '100%',
+      flex: '1 1 300px', // Allow responsive resizing
+      minWidth: '0',
     },
     imageContainer: {
       borderRadius: '12px',
@@ -79,7 +80,7 @@ const CourseCard = ({ course }) => {
   };
 
   return (
-    <div style={styles.card}>
+    <div style={styles.card} className="course-card">
       <div style={styles.imageContainer}>
         <img src={course.image} alt={course.title} style={styles.image} />
       </div>
