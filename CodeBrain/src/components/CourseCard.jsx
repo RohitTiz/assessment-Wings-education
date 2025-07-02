@@ -1,5 +1,5 @@
 import React from 'react';
-import './CourseCard.css'; // Import optional if CSS moved out
+
 
 const CourseCard = ({ course }) => {
   const styles = {
