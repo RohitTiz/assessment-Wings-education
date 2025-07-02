@@ -6,10 +6,10 @@ const HeroSection = () => {
       {/* Left Content */}
       <div style={styles.leftContent}>
         <h1 style={styles.line}>
-          Find Your <span style={styles.ideal}>Ideal</span>
+          Jiya i <span style={styles.ideal}>want</span>
         </h1>
-        <h1 style={styles.line}>Course, Build</h1>
-        <h1 style={styles.skillsLine}>Skills</h1>
+        <h1 style={styles.line}>to, love</h1>
+        <h1 style={styles.skillsLine}>you</h1>
 
         <p style={styles.description}>
           Welcome to EduAll, where learning begins for every professional and lifelong learner.
