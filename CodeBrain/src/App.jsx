@@ -2,7 +2,7 @@ import React from 'react';
 
 // Component Imports
 import Header from './components/Header.jsx';
-import HeroSection from './components/Herosection.jsx';
+import HeroSection from './components/HeroSection.jsx';
 import FeatureSection from './components/FeatureSection.jsx';
 import CourseCard from './components/CourseCard.jsx';
 import FacultySection from './components/FacultySection.jsx';
