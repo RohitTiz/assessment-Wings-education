@@ -9,7 +9,7 @@ const FacultySection = () => {
       size: 'small',
     },
     {
-      name: 'KANIKA MAM',
+      name: 'ANJALI MAM',
       image: 'faculty/mainfac.png',
       blur: false,
       size: 'large',
@@ -27,11 +27,11 @@ const FacultySection = () => {
       textAlign: 'center',
       padding: '60px 20px',
       backgroundColor: '#fff',
-      fontFamily: 'Roboto, sans-serif', // ✅ Apply Roboto globally here
+      fontFamily: 'Roboto, sans-serif', 
     },
     heading: {
       fontSize: '2rem',
-      fontWeight: "4000", // ✅ True bold
+      fontWeight: "4000", 
       marginBottom: '40px',
       color: '#1b3a57',
     },
