@@ -1,6 +1,7 @@
 import React from 'react';
 
 const FeatureSection = () => {
+  // Array of feature objects to be displayed as cards
   const features = [
     {
       image: 'feature/first.png',
@@ -24,7 +25,9 @@ const FeatureSection = () => {
     },
   ];
 
+  // Inline styles for the component
   const styles = {
+    // Outer section wrapper
     section: {
       width: '100%',
       backgroundColor: '#ffffff',
@@ -34,6 +37,7 @@ const FeatureSection = () => {
       justifyContent: 'center',
       fontFamily: 'Roboto, sans-serif',
     },
+    // Container for the cards
     container: {
       marginTop: '-120px',
       display: 'flex',
@@ -50,6 +54,7 @@ const FeatureSection = () => {
       zIndex: 10,
       position: 'relative',
     },
+    // Individual feature card style
     card: {
       flex: '1 1 220px',
       display: 'flex',
@@ -60,18 +65,21 @@ const FeatureSection = () => {
       padding: '12px',
       minWidth: '180px',
     },
+    // Feature icon/image style
     image: {
-      width: '64px', // Increased size
+      width: '64px',
       height: '64px',
       objectFit: 'contain',
       marginBottom: '14px',
     },
+    // Title text style
     title: {
       fontSize: '1.2rem',
       fontWeight: 600,
       marginBottom: '6px',
       color: '#2D2D2D',
     },
+    // Subtitle text style
     subtitle: {
       fontSize: '0.95rem',
       color: '#666',
@@ -83,8 +91,13 @@ const FeatureSection = () => {
       <div style={styles.container}>
         {features.map((feature, index) => (
           <div key={index} style={styles.card}>
+            {/* Feature image */}
             <img src={feature.image} alt={feature.title} style={styles.image} />
+            
+            {/* Feature title */}
             <div style={styles.title}>{feature.title}</div>
+            
+            {/* Feature subtitle */}
             <div style={styles.subtitle}>{feature.subtitle}</div>
           </div>
         ))}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+// FAQ data array
 const faqs = [
   {
     question: 'What is a Payment Gateway?',
@@ -29,8 +30,10 @@ const faqs = [
 ];
 
 const FAQSection = () => {
+  // State to keep track of the currently active question index
   const [activeIndex, setActiveIndex] = useState(1);
 
+  // Section wrapper style
   const sectionStyle = {
     padding: '60px 20px',
     maxWidth: '1200px',
@@ -38,6 +41,7 @@ const FAQSection = () => {
     fontFamily: 'Roboto, sans-serif',
   };
 
+  // Heading style
   const titleStyle = {
     fontSize: '2.2rem',
     fontWeight: '700',
@@ -45,12 +49,14 @@ const FAQSection = () => {
     textAlign: 'center',
   };
 
+  // FAQ layout container
   const containerStyle = {
     display: 'flex',
     flexWrap: 'wrap',
     gap: '24px',
   };
 
+  // Sidebar container for questions
   const listStyle = {
     flex: '1 1 300px',
     minWidth: '280px',
@@ -59,6 +65,7 @@ const FAQSection = () => {
     backgroundColor: '#fff',
   };
 
+  // Style for each question item in the list
   const listItemStyle = (index) => ({
     padding: '18px 20px',
     display: 'flex',
@@ -69,6 +76,7 @@ const FAQSection = () => {
     transition: 'background-color 0.3s ease',
   });
 
+  // Indicator dot beside question
   const indicatorStyle = (index) => ({
     width: '16px',
     height: '16px',
@@ -78,6 +86,7 @@ const FAQSection = () => {
     flexShrink: 0,
   });
 
+  // Text style for each question in the list
   const questionStyle = (index) => ({
     flex: 1,
     fontWeight: activeIndex === index ? '500' : '400',
@@ -85,6 +94,7 @@ const FAQSection = () => {
     color: activeIndex === index ? '#1f1f1f' : '#333',
   });
 
+  // Right-side container for selected answer
   const answerContainerStyle = {
     flex: '1 1 320px',
     minWidth: '280px',
@@ -94,6 +104,7 @@ const FAQSection = () => {
     fontFamily: 'Inter, sans-serif',
   };
 
+  // Style for selected question title
   const questionTitleStyle = {
     fontWeight: '600',
     fontSize: '1.1rem',
@@ -101,6 +112,7 @@ const FAQSection = () => {
     color: '#1f1f1f',
   };
 
+  // Style for answer text
   const answerTextStyle = {
     color: '#444',
     lineHeight: '1.6',
@@ -109,14 +121,17 @@ const FAQSection = () => {
 
   return (
     <section style={sectionStyle}>
+      {/* Section heading */}
       <h2 style={titleStyle}>Frequently Asked Questions</h2>
 
+      {/* Main container with list and answer section */}
       <div style={containerStyle}>
+        {/* Left: Question list */}
         <div style={listStyle}>
           {faqs.map((faq, index) => (
             <div
               key={index}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => setActiveIndex(index)} // Update selected question
               style={listItemStyle(index)}
             >
               <span style={indicatorStyle(index)}></span>
@@ -126,6 +141,7 @@ const FAQSection = () => {
           ))}
         </div>
 
+        {/* Right: Answer display */}
         <div style={answerContainerStyle}>
           <h4 style={questionTitleStyle}>{faqs[activeIndex].question}</h4>
           <p style={answerTextStyle}>{faqs[activeIndex].answer}</p>

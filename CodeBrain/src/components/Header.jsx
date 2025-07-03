@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
 const Header = () => {
+  // Track screen width for responsive behavior
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Listen to window resize events to toggle mobile view
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Inline styles for various components
   const styles = {
     header: {
       backgroundColor: '#fff',
@@ -88,7 +91,7 @@ const Header = () => {
   return (
     <header style={styles.header}>
       <div style={styles.container}>
-        {/* Logo */}
+        {/* Logo section */}
         <div style={styles.logo}>
           <img
             src="image/mainlogo.png"
@@ -97,7 +100,7 @@ const Header = () => {
           />
         </div>
 
-        {/* Hamburger Icon */}
+        {/* Hamburger icon for mobile menu */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           style={styles.hamburger}
@@ -106,7 +109,7 @@ const Header = () => {
           ☰
         </button>
 
-        {/* Navigation */}
+        {/* Main navigation menu */}
         <nav style={styles.nav}>
           <a href="#" style={styles.navItem}>Home</a>
           <a href="#" style={styles.navItem}>Courses</a>
@@ -115,7 +118,7 @@ const Header = () => {
           <a href="#" style={styles.navItem}>About Us</a>
         </nav>
 
-        {/* Search and Button */}
+        {/* Search and login button for desktop */}
         {!isMobile && (
           <div style={styles.rightSide}>
             <input type="text" placeholder="Search" style={styles.search} />
@@ -124,7 +127,7 @@ const Header = () => {
         )}
       </div>
 
-      {/* Show search/login under nav on mobile */}
+      {/* Search and login on mobile when menu is open */}
       {isMobile && menuOpen && (
         <div style={{ ...styles.rightSide, padding: '0 24px 12px' }}>
           <input type="text" placeholder="Search" style={styles.search} />
